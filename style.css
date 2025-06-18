@@ -385,3 +385,115 @@ nav .fa-solid{
   margin-top: -40px;
   display: block;
 }
+body[data-theme="light"] {
+  background: #fff;
+  color: #111;
+}
+
+body[data-theme="light"] .sub-title,
+body[data-theme="light"] nav ul li a,
+body[data-theme="light"] .tab-links,
+body[data-theme="light"] .tab-contents ul li span,
+body[data-theme="light"] .btn,
+body[data-theme="light"] .contact-left p i,
+body[data-theme="light"] .social-icons a {
+  color: #111;
+}
+
+body[data-theme="light"] nav ul {
+  background: #eee;
+}
+
+body[data-theme="light"] .services-list div,
+body[data-theme="light"] .copyright,
+body[data-theme="light"] form input,
+body[data-theme="light"] form textarea {
+  background: #f2f2f2;
+  color: #111;
+}
+
+body[data-theme="light"] .btn.btn2 {
+  background: #ff004f;
+  color: #fff;
+}
+
+.toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #ff004f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .about-col-1, .about-col-2 {
+    width: 100%;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+  nav .fa-bars,
+nav .fa-circle-xmark {
+  font-size: 25px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+nav .fa-bars {
+  display: block;
+}
+
+nav ul {
+  background: #ff004f;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  padding-top: 50px;
+  z-index: 2;
+  transition: right 0.3s ease-in;
+  flex-direction: column;
+}
+
+nav ul li {
+  display: block;
+  margin: 25px;
+}
+
+nav ul .fa-circle-xmark {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  .header-text p {
+    font-size: 18px;
+  }
+
+  .contact-right form input,
+  .contact-right form textarea {
+    width: 100%;
+  }
+}

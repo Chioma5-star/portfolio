@@ -22,10 +22,14 @@
     </ul>
     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
-      <div class="header-text">
-        <p>Web developer </p>
-        <h1> Hi, I'm <span>Chioma</span><br>Osanebi From Nigeria </h1>
-      </div>
+      <div class="header-content">
+  <div class="header-text">
+    <p>Web developer</p>
+    <h1>Hi, I'm <span>Chioma</span><br>Osanebi From Nigeria</h1>
+  </div>
+  <div class="header-image"></div>
+</div>
+
     </div>
   </div>
 <!-- -----------about----------- -->
@@ -214,5 +218,24 @@ Beyond academics, I’m someone who values growth, consistency, and meaningful i
       .catch(error => console.error('Error!', error.message))
   })
 </script>
+<button id="themeToggle" class="btn toggle-btn">Theme</button>
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Default to dark mode
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "dark");
+  }
+  body.setAttribute("data-theme", localStorage.getItem("theme"));
+
+  toggleBtn.addEventListener("click", () => {
+    const currentTheme = body.getAttribute("data-theme");
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    body.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+</script>
+
 </body>
 </html>
